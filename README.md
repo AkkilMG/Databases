@@ -11,7 +11,7 @@
 ### Python
 
 > - [MongoDB](https://github.com/HeimanPictures/Databases/tree/main/python/mongodb)
-> -- [Motor](https://github.com/HeimanPictures/Databases/tree/main/python/mongodb/motor)
+>   - [Motor](https://github.com/HeimanPictures/Databases/tree/main/python/mongodb/motor)
 > - [MySQL](https://github.com/HeimanPictures/Databases/tree/main/python/mysql)
 > - [PostgresSQL](https://github.com/HeimanPictures/Databases/tree/main/python/)
 
