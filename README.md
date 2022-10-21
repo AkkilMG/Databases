@@ -12,7 +12,7 @@
 
 > ⚠️ Spams will not be tolerated, do not send random codes here, you can contribute adding contents to the list, Don't forget to read our contributing guide.
 
-<img src="/asset/hacktoberfestpng.png">
+<img src="https://github.com/HeimanPictures/Databases/raw/main/asset/hacktoberfestpng.png">
 
 ## Databases
 
