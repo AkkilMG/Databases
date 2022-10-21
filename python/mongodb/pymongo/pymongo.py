@@ -95,11 +95,11 @@ class pyMongo:
             print("Please authenticate to move forward.")
             return False
         
-    def limit(self):
+    def limit(self, limit:int):
         if self.auth = True:
             try:
                 lmt = []
-                myresult = self.mycollection.find().limit(5)
+                myresult = self.mycollection.find().limit(limit)
                 for i in myresult:
                     lmt.append(i)
                 return True, lmt
