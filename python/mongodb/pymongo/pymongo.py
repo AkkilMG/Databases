@@ -4,7 +4,7 @@ import json
 from pymongo import MongoClient
 
 
-class pyMongo():
+class pyMongo:
   
     def __init__(self, host, port, db_name, table_name):
         try:
