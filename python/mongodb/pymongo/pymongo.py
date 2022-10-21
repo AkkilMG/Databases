@@ -6,7 +6,7 @@ from pymongo import MongoClient
 
 class pyMongo:
   
-    def __init__(self, host, port, db_name, table_name):
+    def __init__(self, host:str, port:int, db_name:str, table_name:str):
         try:
             myclient = pymongo.MongoClient(f"mongodb://{host}:{port}/")
             self.mydb = myclient[f"{db_name}"]
