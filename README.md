@@ -22,6 +22,7 @@
 
 > - [MongoDB](https://github.com/HeimanPictures/Databases/tree/main/python/mongodb)
 >   - [Motor](https://github.com/HeimanPictures/Databases/tree/main/python/mongodb/motor)
+>   - [pymongo](https://github.com/HeimanPictures/Databases/tree/main/python/mongodb/pymongo)
 > - [MySQL](https://github.com/HeimanPictures/Databases/tree/main/python/mysql)
 > - [PostgresSQL](https://github.com/HeimanPictures/Databases/tree/main/python/)
 
