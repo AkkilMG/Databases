@@ -2,7 +2,17 @@
 
 ## Description
 
+> We are very delight to have you here. 
 
+> We present most of the codes for making database awesome Hacktoberfest 2022 repositories. If you enjoyed this resource, please leave a star ⭐ to support this project! ✨
+
+> This repository could be very help for you (especially to newbies).
+
+> We welcome any valid contibution with docs. To extend this repository
+
+> ⚠️ Spams will not be tolerated, do not send random codes here, you can contribute adding contents to the list, Don't forget to read our contributing guide.
+
+<img src="/asset/hacktoberfestpng.png">
 
 ## Databases
 
