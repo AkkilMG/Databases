@@ -10,7 +10,7 @@ class MySQL():
         self.database = database
         
     def new(self):
-        dataBase = mysql.connector.connect(
+        self.dataBase = mysql.connector.connect(
           host = "localhost",
           user = self.user,
           passwd = self.passwd,
@@ -19,9 +19,9 @@ class MySQL():
         
     def add_database(self):
         try:
-            cursorObject = dataBase.cursor()
+            cursorObject = self.dataBase.cursor()
             cursorObject.execute(f"CREATE DATABASE {self.database}")
-            dataBase.close()
+            self.dataBase.close()
             return True
         except Exception:
             return False
@@ -36,7 +36,7 @@ class MySQL():
                                EMAIL VARCHAR NOT NULL
                                )"""
             cursorObject.execute(tableRecord)
-            dataBase.close()
+            self.dataBase.close()
             return True
         except Exception:
             return False
@@ -47,8 +47,8 @@ class MySQL():
             VALUES (%s, %d, %s, %s)"
             val = (name, id, username, email)
             cursorObject.execute(sql, val)
-            dataBase.commit()
-            dataBase.close()
+            self.dataBase.commit()
+            self.dataBase.close()
             return True
         except Exception:
             return False
@@ -61,7 +61,7 @@ class MySQL():
                 query = f"SELECT * FROM {self.database} where ID >=202200"
             cursorObject.execute(query)
             myresult = cursorObject.fetchall()
-            dataBase.close()
+            self.dataBase.close()
             return True
         except Exception:
             return False
@@ -71,6 +71,7 @@ class MySQL():
             query = f"SELECT * FROM {self.database} ORDER BY NAME DESC"
             cursorObject.execute(query)
             myresult = cursorObject.fetchall()
+            self.dataBase.close()
             return True, myresult
         except Exception:
             return False, None
@@ -80,7 +81,7 @@ class MySQL():
             query = f"SELECT * FROM {self.database} LIMIT 2 OFFSET 1"
             cursorObject.execute(query)
             myresult = cursorObject.fetchall()
-            dataBase.close()
+            self.dataBase.close()
             return True
         except Exception:
             return False
@@ -89,8 +90,8 @@ class MySQL():
         try:
             query = f"UPDATE {self.database} SET USERNAME = {new_username} WHERE EMAIL ='{email}'"
             cursorObject.execute(query)
-            dataBase.commit()
-            dataBase.close()
+            self.dataBase.commit()
+            self.dataBase.close()
             return True
         except Exception:
             return False
@@ -99,8 +100,8 @@ class MySQL():
         try:
             query = f"DELETE FROM {self.database} WHERE USERNAME = '{username}'"
             cursorObject.execute(query)
-            dataBase.commit()
-            dataBase.close()
+            self.dataBase.commit()
+            self.dataBase.close()
             return True
         except Exception:
             return False
@@ -112,8 +113,8 @@ class MySQL():
             else:
                 query = f"DROP TABLE {self.database};"
             cursorObject.execute(query)
-            dataBase.commit()
-            dataBase.close()
+            self.dataBase.commit()
+            self.dataBase.close()
             return True
         except Exception:
             return False
