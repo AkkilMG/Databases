@@ -85,9 +85,9 @@ class pyMongo:
         if self.auth = True:
             try:
                 if many == True:
-                    self.mycollection.update_many({EMAIL: f"{myquery}"}, {EMAIL: f"{newquery}"})
+                    self.mycollection.update_many({EMAIL: f"{oldquery}"}, {EMAIL: f"{newquery}"})
                 else:
-                    self.mycollection.update_one({EMAIL: f"{myquery}"}, {EMAIL: f"{newquery}"})
+                    self.mycollection.update_one({EMAIL: f"{oldquery}"}, {EMAIL: f"{newquery}"})
                 return True
             except Exception:
                 return False
