@@ -1,6 +1,6 @@
 # AkKiL [github.com/HeimanPictures]
 
-import json
+
 from pymongo import MongoClient
 
 
@@ -32,11 +32,11 @@ class pyMongo:
             print("Please authenticate to move forward.")
             return False
         
-    def find(self, value:json):
+    def find_id(self, value:id):
         if self.auth = True:
             try:
                 fd = []
-                for i in self.mydb.myTable.find(value):
+                for i in self.mydb.myTable.find({ID: value}):
                     fd.append(i)
                 return True, fd
             except Exception:
@@ -56,10 +56,10 @@ class pyMongo:
             print("Please authenticate to move forward.")
             return False, 0
     
-    def count_of_value(self, value:json):
+    def count_of_name(self, value:str):
         if self.auth = True:
             try:
-                count = self.mydb.myTable.find(value).count()
+                count = self.mydb.myTable.find({NAME: f"{value}"}).count()
                 return True, count
             except Exception:
                 return False, 0
@@ -81,13 +81,13 @@ class pyMongo:
             print("Please authenticate to move forward.")
             return False, None
 
-    def update(self, many:bool, oldquery:json, newquery:json):
+    def update_email(self, many:bool, oldquery:str, newquery:str):
         if self.auth = True:
             try:
                 if many == True:
-                    self.mycollection.update_many(myquery, newquery)
+                    self.mycollection.update_many({EMAIL: f"{myquery}"}, {EMAIL: f"{newquery}"})
                 else:
-                    self.mycollection.update_one(myquery, newquery)
+                    self.mycollection.update_one({EMAIL: f"{myquery}"}, {EMAIL: f"{newquery}"})
                 return True
             except Exception:
                 return False
@@ -110,10 +110,10 @@ class pyMongo:
             return False, None
 
         
-    def delete(self, myquery:json):
+    def delete_id(self, myquery:id):
         if self.auth = True:
             try:
-                mycol.delete_one(myquery)
+                mycol.delete_one({ID: f"{myquery}"})
                 return True
             except Exception:
                 return False
