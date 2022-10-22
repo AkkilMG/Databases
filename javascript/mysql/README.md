@@ -4,9 +4,15 @@
 
 > MySQL database is a type of SQL database. We can implement it in most of the programming language.
 
+## Requirements
+
+```
+npm install mysql
+```
+
 ## Use Case
 
 
 ## Credits
 
-- [**UnKnown**](https://github.com/)
+- [**AkKiL**](https://github.com/)
