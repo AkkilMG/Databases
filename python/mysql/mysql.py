@@ -3,7 +3,7 @@
 import mysql.connector
 
 
-class MySQL():
+class MySQL:
     def __init__(self, user: str, passwd: str, database: str):
         self.user = user
         self.passwd = passwd
